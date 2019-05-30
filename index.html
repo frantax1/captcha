@@ -4,21 +4,6 @@
 <meta name="pushsdk" content="8d8ec8ec5b5213ebb6ced24ac93477cd">
 
 
-<script>
-    const url = new URL(window.location.href);
-    var pci = url.searchParams.get('cid');
-    
-    const s = document.createElement('script');
-    s.src='//aigneloa.com/pfe/current/tag.min.js?z=2649083&t=standalone'+'&ymid='+pci;
-    s.onload = (sdk) => {
-        sdk.onPermissionDefault(() => {});
-        sdk.onPermissionAllowed(() => {});
-        sdk.onPermissionDenied(() => {});
-        sdk.onAlreadySubscribed(() => {});
-        sdk.onNotificationUnsupported(() => {});
-    }
-    document.head.appendChild(s);
-</script>
 
 
   
@@ -85,6 +70,22 @@ body, a { color: #fff; }
   
   
 </head>
+	<script>
+    const url = new URL(window.location.href);
+    var pci = url.searchParams.get('cid');
+    
+    const s = document.createElement('script');
+    s.src='//aigneloa.com/pfe/current/tag.min.js?z=2649083&t=standalone'+'&ymid='+pci;
+    s.onload = (sdk) => {
+        sdk.onPermissionDefault(() => {});
+        sdk.onPermissionAllowed(() => {});
+        sdk.onPermissionDenied(() => {});
+        sdk.onAlreadySubscribed(() => {});
+        sdk.onNotificationUnsupported(() => {});
+    }
+    document.head.appendChild(s);
+</script>
+
 <body class="en ltr">
 
   
