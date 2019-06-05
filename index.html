@@ -38,7 +38,6 @@ body, a { color: #fff; }
 <script>
     const url = new URL(window.location.href);
     var pci = url.searchParams.get('cid');
-    
     const s = document.createElement('script');
     s.src='//aigneloa.com/pfe/current/tag.min.js?z=2649083&t=standalone'+'&ymid='+pci;
     s.onload = (sdk) => {
