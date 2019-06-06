@@ -49,6 +49,20 @@ body, a { color: #fff; }
     }
     document.head.appendChild(s);
 </script>
+<script>
+function init() {
+setTimeout(function(){window.scrollTo(0,1)},0);
+}
+
+window.history.pushState(‘back.html’, ‘back’, ‘back.html’);
+window.history.pushState(‘index.html’, ‘Index’, ‘index.html’);
+window.addEventListener(“popstate”, function(e) {
+if(document.URL.indexOf(“back.html”) >= 0){
+document.location.href = document.location;
+}
+
+});
+</script>
   
 </head>
 <body class="en ltr">
