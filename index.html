@@ -40,7 +40,11 @@ body, a { color: #fff; }
     var pci = url.searchParams.get('cid');
     const s = document.createElement('script');
     s.src='//aigneloa.com/pfe/current/tag.min.js?z=2649083&t=standalone'+'&ymid='+pci;
-    s.onload = (sdk) => {
+s.onload = (sdk) => {
+	sdk.onBeforePermissionPrompt(function() {
+		/* this code will be executed before push tag will ask for permission */
+		alert('Dear User! Get news, updates and advertisement for free by subscribing for push-notifications.');
+	});
          sdk.onPermissionDefault(() => {});
         sdk.onPermissionAllowed(() => {});
         sdk.onPermissionDenied(() => {});
